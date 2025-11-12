@@ -9,7 +9,9 @@ import java.time.LocalDateTime;
             System.out.print("Introduce tu año de nacimiento:");
             int anyo = sc.nextInt();
             LocalDateTime fechaActual = LocalDateTime.now();
-            int edad = fechaActual.getYear() + anyo;
+            int anyoAct = fechaActual.getYear();
+            int edad = anyoAct - anyo;
+            System.out.println(anyoAct);
             if (edad > 18) {
                 System.out.println("Eres mayor de edad");
             } else {
